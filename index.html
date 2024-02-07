@@ -24,7 +24,14 @@
 
         function calculateAge(){
             // alert("Hello");
+            console.log(userInput.value);
+            
             let birthDate = new Date(userInput.value);
+
+            if (!userInput.value){
+                result.innerHTML = "Please enter your age!";
+            }
+            else{
             
             let d1 = birthDate.getDate();
             let m1 = birthDate.getMonth() + 1;
@@ -62,6 +69,7 @@
         function getDaysInMonth(year, month){
             return new Date(year, month, 0).getDate();
         }
+    }
     </script>
 </body>
 </html>
